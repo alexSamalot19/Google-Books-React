@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import BookList from "../components/BookList/BookList";
 import JumbotronHome from "../components/JumbotronHome";
-import NavHome from "../components/NavHome";
 import ButtonHome from "../components/ButtonHome";
 import { Container, Row, Col } from "../components/GridHome";
 import InputHome from "../components/InputHome";
