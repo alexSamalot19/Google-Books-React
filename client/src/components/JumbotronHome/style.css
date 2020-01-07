@@ -1,0 +1,11 @@
+.jumbotron {
+  background-image: url("https://media3.giphy.com/media/Ghw8BX03RxZM4/giphy.gif?cid=790b7611a5f3144363257b37128217ec70c0adece8d60575&rid=giphy.gif");
+  /* The image used */
+  height: 600px;
+  background-position: center;
+  /* Center the image */
+  background-repeat: no-repeat;
+  /* Do not repeat the image */
+  background-size: cover;
+  /* Resize the background image to cover the entire container */
+}
