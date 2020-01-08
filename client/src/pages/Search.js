@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import BookList from "../components/BookList/BookList";
-import JumbotronHome from "../components/JumbotronHome";
-import ButtonHome from "../components/ButtonHome";
-import { Container, Row, Col } from "../components/GridHome";
-import InputHome from "../components/InputHome";
+import Jumbotron from "../components/Jumbotron";
+import Button from "../components/Button";
+import { Container, Row, Col } from "../components/Grid";
+import Input from "../components/Input";
 import API from "../utils/API";
 
 class Search extends Component {
   state = {
-    booksCall: [],
-    bookSearch: "",
     books: [],
     authors: "",
     description: "",
@@ -86,7 +84,7 @@ class Search extends Component {
   render() {
     return (
       <div>
-        <JumbotronHome />
+        <Jumbotron />
 
         <Container>
           <Row>
@@ -95,7 +93,7 @@ class Search extends Component {
                 <Container>
                   <Row>
                     <Col size="xs-9 sm-10">
-                      <InputHome
+                      <Input
                         name="bookSearch"
                         value={this.state.bookSearch}
                         onChange={this.handleInputChange}
@@ -103,13 +101,13 @@ class Search extends Component {
                       />
                     </Col>
                     <Col size="xs-3 sm-2">
-                      <ButtonHome
+                      <Button
                         onClick={this.handleFormSubmit}
                         type="success"
                         className="input-lg"
                       >
                         Search
-                      </ButtonHome>
+                      </Button>
                     </Col>
                   </Row>
                 </Container>

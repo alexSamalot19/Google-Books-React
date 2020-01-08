@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "../GridHome";
+import { Row, Col } from "../Grid";
 
 function BookList(props) {
   return (
