@@ -75,14 +75,14 @@ class Saved extends Component {
                 {this.state.books.map(book => (
                   <ListItem key={book._id}>
                     <Row
-                      className="SearchResult row"
+                      className="individualBook"
                       id={book.title + "Card"}
                       key={book._id}
                     >
                       <Col size="2" className="bookImage">
                         <img src={book.image} alt={book.title} />
                       </Col>
-                      <Col size="1" className="emptyCol" />
+                      <Col size="1" className="verticalMargin" />
                       <Col size="9" className="bookInfo">
                         <Row>
                           <h3 className="bookTitle">{book.title}</h3>
@@ -90,31 +90,31 @@ class Saved extends Component {
                         <Row>
                           <h4 className="bookAuthor">{book.authors}</h4>
                         </Row>
+                        <Row className="buttonDiv ">
+                          <button
+                            className="saveBook btn btn-danger"
+                            id={book.id}
+                            onClick={() => this.deleteBook(book._id)}
+                          >
+                            Delete Book
+                          </button>
+                          <a href={book.link} target="_blank">
+                            <button className="viewBook btn btn-secondary">
+                              View Book
+                            </button>
+                          </a>
+                        </Row>
                         <Row>
                           <p className="bookDescription">{book.description}</p>
                         </Row>
                       </Col>
                     </Row>
                     <br></br>
-                    <Row className="buttonDiv ">
-                      <button
-                        className="saveBook btn btn-primary"
-                        id={book.id}
-                        onClick={() => this.deleteBook(book._id)}
-                      >
-                        Delete Book
-                      </button>
-                      <a href={book.link} target="_blank">
-                        <button className="viewBook btn btn-success">
-                          View Book
-                        </button>
-                      </a>
-                    </Row>
                   </ListItem>
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
+              <h3>No Books to Display</h3>
             )}
           </Row>
         </Container>
