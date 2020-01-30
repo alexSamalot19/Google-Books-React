@@ -6,6 +6,8 @@ import { Container, Row, Col } from "../components/Grid";
 import Input from "../components/Input";
 import API from "../utils/API";
 
+const inputBottomMargin = { marginBottom: "20px" };
+
 class Search extends Component {
   state = {
     books: [],
@@ -89,7 +91,7 @@ class Search extends Component {
         <Container>
           <Row>
             <Col size="md-12">
-              <form>
+              <form style={inputBottomMargin}>
                 <Container>
                   <Row>
                     <Col size="xs-9 sm-10">
@@ -97,7 +99,7 @@ class Search extends Component {
                         name="bookSearch"
                         value={this.state.bookSearch}
                         onChange={this.handleInputChange}
-                        placeholder="Search For a Book"
+                        placeholder="How about Kill a Mockingbird?"
                       />
                     </Col>
                     <Col size="xs-3 sm-2">
@@ -118,6 +120,7 @@ class Search extends Component {
             <BookList
               books={this.state.books}
               handleSaveButton={this.handleSaveButton}
+              bookSearchValue={this.state.bookSearch}
             />
           </Row>
         </Container>
