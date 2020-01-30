@@ -5,18 +5,18 @@ const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Define middleware here
+// Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Serve up static assets (usually on heroku)
+// Static assets
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join("client", "build")));
 }
-// Add routes, both API and view
+// Routes
 app.use(routes);
 
-// Connect to the Mongo DB
+// Connect to the Mongo DB or mlab
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
 
 // Start the API server

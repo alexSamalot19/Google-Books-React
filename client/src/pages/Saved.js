@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import SavedBookList from "../components/SavedBookList/SavedBookList";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import { Col, Row, Container } from "../components/Grid";
-import { List, ListItem } from "../components/List";
+import { Row, Container } from "../components/Grid";
 
 class Saved extends Component {
   state = {

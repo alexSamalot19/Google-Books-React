@@ -35,7 +35,11 @@ function BookList(props) {
                         >
                           Save it!
                         </button>
-                        <a href={book.link} target="_blank">
+                        <a
+                          href={book.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
                           <button className="viewBook btn btn-secondary">
                             View it!
                           </button>

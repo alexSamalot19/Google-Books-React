@@ -18,21 +18,18 @@ class Search extends Component {
     title: ""
   };
 
-  //function to control the submit button of the search form
+  //Function to control the submit button of the search form
   handleFormSubmit = event => {
     event.preventDefault();
-    // console.log(this.state.bookSearch);
-    // once it clicks it connects to the google book api with the search value
+
+    // On click connects to the google book api with the search value
     API.getBookSearch(this.state.bookSearch)
       .then(res => {
         if (res.data.items === "error") {
           throw new Error(res.data.items);
         } else {
-          // store response in a array
           let results = res.data.items;
-          //map through the array
           results = results.map(result => {
-            //store each book information in a new object
             result = {
               key: result.id,
               id: result.id,
@@ -42,10 +39,8 @@ class Search extends Component {
               image: result.volumeInfo.imageLinks.thumbnail,
               link: result.volumeInfo.infoLink
             };
-            // console.log(result);
             return result;
           });
-          // reset the sate of the empty books array to the new arrays of objects with properties geting back from the response
           this.setState({ books: results, error: "" });
         }
       })
@@ -66,16 +61,11 @@ class Search extends Component {
         image: bookData.image,
         link: bookData.link,
         title: bookData.title
-      })
-        // .then(res => this.loadBooks())
-        .catch(err => console.log(err));
+      }).catch(err => console.log(err));
     }
   };
 
   handleInputChange = event => {
-    // Destructure the name and value properties off of event.target
-    // Update the appropriate state
-    // console.log(event.target);
     const { name, value } = event.target;
     this.setState({
       [name]: value
