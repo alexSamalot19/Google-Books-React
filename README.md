@@ -18,7 +18,9 @@ When the user searches a term:
 
 ![SearchResults](client/public/img/SearchResults.png)
 
-When the user chooses the saved books option at the top of the page the results of any saves from any search that has not been deleted is displayed in the same fashion as the search results.
+When the user chooses the saved books option at the top of the page the results of any saves from any search that has not been deleted is displayed in a similar fashion as the search results.
+
+![SavedResults](client/public/img/SavedResults.png)
 
 ## This App Utilizes
 
