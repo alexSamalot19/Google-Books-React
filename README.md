@@ -30,6 +30,10 @@ When the user chooses the saved books option at the top of the page the results 
 
 - [Node JS](https://nodejs.org/en/)
 
+- [Bootstrap](https://getbootstrap.com/)
+
+- [GoogleBooksAPI](https://developers.google.com/books/)
+
 <br>
 
 ## Role in Development
