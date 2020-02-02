@@ -18,11 +18,9 @@ class Search extends Component {
     title: ""
   };
 
-  //Function to control the submit button of the search form
   handleFormSubmit = event => {
     event.preventDefault();
 
-    // On click connects to the google book api with the search value
     API.getBookSearch(this.state.bookSearch)
       .then(res => {
         if (res.data.items === "error") {
