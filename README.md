@@ -43,4 +43,4 @@ When the user chooses the saved books option at the top of the page the results 
 My name is Alex I am a bootcamp student whose portfolio can be found
 [here](https://alexsamalot19.github.io/Samalot-Alexander-Portfolio/).
 
-I created React components, worked with helper/util functions, and utilized React lifecycle methods to query and display books based on user searches. Node, Express and MongoDB were used so that users can save books to review or purchase later. The site is deployed to Heroku [here](https://google-react-b00k.herokuapp.com/).
+I created React components, worked with helper/util functions, and utilized React lifecycle methods to query and display books based on user searches. Node, Express and MongoDB were used so that users can save books to review or purchase in google books later. The site is deployed to Heroku [here](https://google-react-b00k.herokuapp.com/).
